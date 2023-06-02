@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {ROUTE_BIO_PAGE, ROUTE_POSTS_PAGE, ROUTE_USER_PAGE} from "./constants/routes";
 import PostListPage from "./pages/PostListPage/PostListPage";

@@ -1,5 +1,5 @@
 import React from 'react';
-import c from "./BioPage.module.css";
+import c from "./BioPage.module.sass";
 
 const BioPage = () => {
     return (

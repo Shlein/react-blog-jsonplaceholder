@@ -18,10 +18,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "checkJs": true
   },
-  "include": [
-    "src"
-  ],
+  "include": [ "typings", "src" ],
   "files": ["./node_modules/wmr/index.d.ts"],
 }
