@@ -17,7 +17,7 @@ function App() {
                 <Route path={"/"} element={<Layout />} >
                     <Route index element={<PostListPage />} />
                     <Route path={ROUTE_BIO_PAGE} element={<BioPage />} />
-                    <Route path={ROUTE_USER_PAGE} element={<UserPage />} />
+                    <Route path={ROUTE_USER_PAGE + "/:userId"} element={<UserPage />} />
                     <Route path={"*"} element={<NotFoundPage />} />
                 </Route>
             </Routes>
