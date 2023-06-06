@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IUserData, IUserState} from "../types/userTypes";
+import {IPost} from "../../../PostListPage/store/types/postsTypes";
 
 const initialState: IUserState = {
     userData: {
@@ -10,6 +11,7 @@ const initialState: IUserState = {
         phone: "",
         website: "",
     },
+    userPosts: [],
     isUserPageLoading: false,
 }
 
@@ -20,6 +22,9 @@ const userSlice = createSlice({
         setUserData(state, {payload}: PayloadAction<IUserData>) {
             state.userData = payload
         },
+        setUserPosts(state, {payload}: PayloadAction<IPost[]>) {
+            state.userPosts = payload
+        },
         setIsUserPageLoading(state, {payload}: PayloadAction<boolean>) {
             state.isUserPageLoading = payload
         }
@@ -28,6 +33,7 @@ const userSlice = createSlice({
 
 export const {
     setUserData,
+    setUserPosts,
     setIsUserPageLoading,
 } = userSlice.actions
 

@@ -16,7 +16,7 @@ export const mainApi = {
             return e
         }
     },
-    async getUserInfo(userId: string): Promise<IUserApiResponse> {
+    async getUserInfo(userId: number): Promise<IUserApiResponse> {
         try {
             await delay(500);
             return await axiosInstance.get(userUrl + userId);

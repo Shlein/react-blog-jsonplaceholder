@@ -2,13 +2,14 @@ import React, {useEffect} from 'react';
 import {Link, useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../redux/hooks";
 import {getUserDataSaga} from "./store/sagas/userSaga";
-import {getUserDataSagaAction} from "./store/sagas/userSagaActions";
+import {getPostsByUserIdSagaAction, getUserDataSagaAction} from "./store/sagas/userSagaActions";
 import Card from "react-bootstrap/Card";
-import {Button, Row} from "react-bootstrap";
-import {getIsUserPageLoading, getUserData} from "./store/selectors/userSelectors";
+import {Button, Col, Row} from "react-bootstrap";
+import {getIsUserPageLoading, getUserData, getUserPosts} from "./store/selectors/userSelectors";
 import Container from "react-bootstrap/Container";
 import Spinner from "react-bootstrap/Spinner";
 import Nav from "react-bootstrap/Nav";
+import Post from "../../components/Post/Post";
 
 const UserPage = () => {
 
@@ -17,10 +18,13 @@ const UserPage = () => {
     const isPageLoading = useAppSelector(getIsUserPageLoading);
 
     useEffect(() => {
-        userId && dispatch(getUserDataSagaAction({userId: userId}))
+        userId && dispatch(getUserDataSagaAction({userId: Number(userId)}));
+        userId && dispatch(getPostsByUserIdSagaAction({userId: Number(userId)}));
     }, [userId])
 
     const userData = useAppSelector(getUserData);
+    const userPosts = useAppSelector(getUserPosts);
+
     return (
         <>
             {
@@ -46,7 +50,7 @@ const UserPage = () => {
                                 На главную
                             </Nav.Link>
                         </Button>
-                        <Row className="justify-content-center">
+                        <Row className="justify-content-center mb-3">
                             <Card key={userData.id} style={{ width: '18rem' }}>
                                 <Card.Img
                                     variant="top"
@@ -67,6 +71,16 @@ const UserPage = () => {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
+                        </Row>
+
+                        <Row md={3}>
+                            {
+                                userPosts.map(post => (
+                                    <Col key={post.id}>
+                                        <Post post={post} />
+                                    </Col>
+                                ))
+                            }
                         </Row>
                     </Container>
             }

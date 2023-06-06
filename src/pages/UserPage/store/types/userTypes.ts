@@ -1,6 +1,9 @@
+import {IPost} from "../../../PostListPage/store/types/postsTypes";
+
 export interface IUserState {
     isUserPageLoading: boolean,
     userData: IUserData,
+    userPosts: IPost[],
 }
 
 export interface IUserData {
