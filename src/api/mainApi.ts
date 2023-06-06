@@ -1,5 +1,5 @@
 import axiosInstance from "./axiosConfig";
-import {IPostListApiResponse} from "../pages/PostListPage/store/types/postsTypes";
+import {ICommentsApiResponse, IPostListApiResponse} from "../pages/PostListPage/store/types/postsTypes";
 import {IUserApiResponse} from "../pages/UserPage/store/types/userTypes";
 import {delay} from "../utils/delay";
 
@@ -20,6 +20,22 @@ export const mainApi = {
         try {
             await delay(500);
             return await axiosInstance.get(userUrl + userId);
+        } catch (e: any) {
+            return e
+        }
+    },
+    async getPostsByUserId(userId: number): Promise<IPostListApiResponse> {
+        try {
+            await delay(500);
+            return await axiosInstance.get(userUrl + userId + "/posts");
+        } catch (e: any) {
+            return e
+        }
+    },
+    async getCommentsByPostId(postId: number): Promise<ICommentsApiResponse> {
+        try {
+            await delay(500);
+            return await axiosInstance.get(postsUrl + postId + "/comments");
         } catch (e: any) {
             return e
         }

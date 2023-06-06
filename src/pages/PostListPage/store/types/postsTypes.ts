@@ -10,7 +10,20 @@ export interface IPost {
     body: string,
 }
 
+export interface IComment {
+    postId: number,
+    id: number,
+    name: string,
+    email: string,
+    body: string,
+}
+
 export interface IPostListApiResponse {
     status: number,
     data: IPost[],
+}
+
+export interface ICommentsApiResponse {
+    status: number,
+    data: IComment[],
 }

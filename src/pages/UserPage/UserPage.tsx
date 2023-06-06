@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../redux/hooks";
 import {getUserDataSaga} from "./store/sagas/userSaga";
 import {getUserDataSagaAction} from "./store/sagas/userSagaActions";
@@ -8,6 +8,7 @@ import {Button, Row} from "react-bootstrap";
 import {getIsUserPageLoading, getUserData} from "./store/selectors/userSelectors";
 import Container from "react-bootstrap/Container";
 import Spinner from "react-bootstrap/Spinner";
+import Nav from "react-bootstrap/Nav";
 
 const UserPage = () => {
 
@@ -37,6 +38,14 @@ const UserPage = () => {
                         </Button>
                     :
                     <Container >
+                        <Button className="mb-3">
+                            <Nav.Link
+                                as={Link}
+                                to={"/"}
+                            >
+                                На главную
+                            </Nav.Link>
+                        </Button>
                         <Row className="justify-content-center">
                             <Card key={userData.id} style={{ width: '18rem' }}>
                                 <Card.Img
