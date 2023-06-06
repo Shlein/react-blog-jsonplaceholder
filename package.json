@@ -1,6 +1,6 @@
 {
   "name": "front_dev_checkport",
-  "homepage": "https://shlein.github.io/react-blog-json-placeholder",
+  "homepage": "https://shlein.github.io/react-blog-jsonplaceholder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
