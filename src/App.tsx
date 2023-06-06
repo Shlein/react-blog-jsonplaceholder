@@ -11,7 +11,7 @@ import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename="/" >
         <div className="App">
             <Routes>
                 <Route path={"/"} element={<Layout />} >
