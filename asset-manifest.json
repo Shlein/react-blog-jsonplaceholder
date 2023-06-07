@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.3e8ed6b4.css",
-    "main.js": "/static/js/main.3a96a7e7.js",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/burger-menu-shrinked.png": "/static/media/burger-menu-shrinked.fd250fa91a48f6ab3561.png",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "index.html": "/index.html",
-    "main.3e8ed6b4.css.map": "/static/css/main.3e8ed6b4.css.map",
-    "main.3a96a7e7.js.map": "/static/js/main.3a96a7e7.js.map"
+    "main.css": "/react-blog-jsonplaceholder/static/css/main.73155d9b.css",
+    "main.js": "/react-blog-jsonplaceholder/static/js/main.b9dc93c9.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/react-blog-jsonplaceholder/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/react-blog-jsonplaceholder/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/react-blog-jsonplaceholder/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/react-blog-jsonplaceholder/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/burger-menu-shrinked.png": "/react-blog-jsonplaceholder/static/media/burger-menu-shrinked.fd250fa91a48f6ab3561.png",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/react-blog-jsonplaceholder/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/react-blog-jsonplaceholder/index.html",
+    "main.73155d9b.css.map": "/react-blog-jsonplaceholder/static/css/main.73155d9b.css.map",
+    "main.b9dc93c9.js.map": "/react-blog-jsonplaceholder/static/js/main.b9dc93c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e8ed6b4.css",
-    "static/js/main.3a96a7e7.js"
+    "static/css/main.73155d9b.css",
+    "static/js/main.b9dc93c9.js"
   ]
 }
