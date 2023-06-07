@@ -1,10 +1,10 @@
 import React from 'react';
-import c from "./BioPage.module.sass";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import {Button, Row} from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import {Link} from "react-router-dom";
+import {BASE_ROUTE} from "../../constants/routes";
 
 const BioPage = () => {
     return (
@@ -12,7 +12,7 @@ const BioPage = () => {
             <Button className="mb-3">
                 <Nav.Link
                     as={Link}
-                    to={"/"}
+                    to={BASE_ROUTE}
                 >
                     На главную
                 </Nav.Link>

@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import {Link, useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../redux/hooks";
-import {getUserDataSaga} from "./store/sagas/userSaga";
 import {getPostsByUserIdSagaAction, getUserDataSagaAction} from "./store/sagas/userSagaActions";
 import Card from "react-bootstrap/Card";
 import {Button, Col, Row} from "react-bootstrap";
@@ -10,6 +9,7 @@ import Container from "react-bootstrap/Container";
 import Spinner from "react-bootstrap/Spinner";
 import Nav from "react-bootstrap/Nav";
 import Post from "../../components/Post/Post";
+import {BASE_ROUTE} from "../../constants/routes";
 
 const UserPage = () => {
 
@@ -20,7 +20,7 @@ const UserPage = () => {
     useEffect(() => {
         userId && dispatch(getUserDataSagaAction({userId: Number(userId)}));
         userId && dispatch(getPostsByUserIdSagaAction({userId: Number(userId)}));
-    }, [userId])
+    }, [dispatch, userId])
 
     const userData = useAppSelector(getUserData);
     const userPosts = useAppSelector(getUserPosts);
@@ -45,7 +45,7 @@ const UserPage = () => {
                         <Button className="mb-3">
                             <Nav.Link
                                 as={Link}
-                                to={"/"}
+                                to={BASE_ROUTE}
                             >
                                 На главную
                             </Nav.Link>
